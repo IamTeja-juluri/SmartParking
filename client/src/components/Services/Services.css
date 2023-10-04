@@ -1,0 +1,66 @@
+.services {
+  background: rgb(32, 29, 29);
+  padding: 100px;
+  border-radius: 50px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 80%; /* Increase the width */
+  max-width: 800px; /* Set a maximum width for better readability */
+  margin: 0 auto;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+.services h2 {
+  color: wheat;
+  margin-bottom: 20px;
+}
+
+.services p {
+  color: wheat;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: large;
+}
+
+.services .service-item {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-up 0.5s ease-in-out forwards;
+}
+
+.services .service-item i {
+  font-size: 48px;
+  color: #007bff; /* Blue color */
+  margin-bottom: 10px;
+}
+
+.services .service-item h3 {
+  color: wheat;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+
+.services .service-item p {
+  color: wheat;
+  line-height: 1.5;
+  font-size: large;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

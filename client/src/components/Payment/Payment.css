@@ -1,0 +1,69 @@
+.payment-component {
+    background: rgb(32, 29, 29);
+    padding: 30px;
+    border-radius: 25px;
+    border: 2px solid #212020;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;   
+    margin-top: 25px; 
+  }
+  
+  .payment-component h3 {
+    color: wheat;
+    margin-bottom: 20px;
+  }
+  
+  .payment-component label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: wheat;
+    text-align: left;
+  }
+  
+  .payment-component input[type="text"],
+  .payment-component input[type="text"],
+  .payment-component input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 20px;
+    border-color: #333;
+  }
+  
+  .payment-component button {
+    background-color: rgb(119, 12, 12);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:20px;
+  }
+  
+  .payment-component button:hover {
+    background-color: rgb(155, 99, 99);
+  }
+  
+  .payment-component button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .payment-success {
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

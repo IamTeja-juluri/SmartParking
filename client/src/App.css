@@ -1,0 +1,8 @@
+:root {
+  --app-background-color: black;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--app-background-color); /* Use the variable */
+}

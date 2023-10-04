@@ -1,0 +1,83 @@
+.contact-us {
+  background: rgb(32, 29, 29);
+  padding: 100px;
+  border-radius: 50px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+.contact-us h2 {
+  color: wheat;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-us p {
+  color: wheat;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-up 0.5s ease-in-out forwards;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: rgb(132, 132, 146);
+  margin: 0 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-links a i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.contact-us {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-us:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about h2,
+.about p,
+.about a,
+.about i {
+  animation: fadeIn 0.5s ease-in-out;
+}
