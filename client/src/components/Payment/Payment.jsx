@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Payment.css';
+import axios from 'axios';
 import { useLocation,useNavigate } from 'react-router-dom';
+
 
 
 const Payment = () => {
@@ -26,18 +28,34 @@ const Payment = () => {
   const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false);
 
   const handlePayment = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsPaymentSuccessful(true);
-    setOwnerName('');
-    setVehicleNumber('');
-    setMobileNumber('');
-    setDuration('');
-    setCardNumber('');
-    setExpiryDate('');
-    setCVC('');
-    setAmount('');
-    await new Promise((resolve)=>setTimeout(resolve,5000));
-    setIsPaymentSuccessful(false);
+    try{
+      const data={
+        name: ownerName,
+        mobileNumber: mobileNumber,
+        locationName: locationName,
+        slot: slot,
+        vehicleNumber: vehicleNumber,
+        duration: duration,
+        cardNumber: cardNumber,
+        cvv: cvc,
+        expiryDate: expiryDate,
+        amount: amount
+       }
+      const response = await axios.post('http://127.0.0.1:5000/api/v1/user/payment',data);
+      setIsPaymentSuccessful(true);
+      setOwnerName('');
+      setVehicleNumber('');
+      setMobileNumber('');
+      setDuration('');
+      setCardNumber('');
+      setExpiryDate('');
+      setCVC('');
+      setAmount('');
+      await new Promise((resolve)=>setTimeout(resolve,5000));
+      setIsPaymentSuccessful(false);
+    }catch(error){
+     throw error;
+    }
   };
 
   const onCancel = () => {
