@@ -3,8 +3,6 @@ import './Payment.css';
 import axios from 'axios';
 import { useLocation,useNavigate } from 'react-router-dom';
 
-
-
 const Payment = () => {
 
   const navigate = useNavigate();
@@ -53,6 +51,7 @@ const Payment = () => {
       setAmount('');
       await new Promise((resolve)=>setTimeout(resolve,5000));
       setIsPaymentSuccessful(false);
+      navigate('/findParking')
     }catch(error){
      throw error;
     }
@@ -63,7 +62,6 @@ const Payment = () => {
   }
 
   return (
-    <form>
     <div className="payment-component">
       <h3>Reserve Slot: {slot}</h3>
       <div>
@@ -155,7 +153,6 @@ const Payment = () => {
         <button onClick={onCancel}>Cancel Reservation</button>
       )}
     </div>
-    </form>
   );
 };
 

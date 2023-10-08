@@ -25,7 +25,7 @@ const App=  () => {
         <Route path="/findParking" element={<Home><ParkingAvailability/></Home>} />
         {isUserAuthenticated ? (
           <>
-          <Route path="/findParking/payment/" element={<Home><Payment/></Home>} />
+          <Route path="/findParking/payment" element={<Home><Payment/></Home>} />
           </>
         ):(
           <>

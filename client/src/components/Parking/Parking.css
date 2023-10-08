@@ -50,8 +50,8 @@ button:hover {
 }
 
 .parking-slot {
-  flex: 0 0 calc(33.33% - 10px);
-  height: 100px;
+  flex: 0 0 calc(50% - 10px);
+  height: 150px;
   border: 2px solid #333;
   background-color: #fff;
   display: flex;
